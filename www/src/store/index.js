@@ -1,4 +1,9 @@
 import axios from 'axios'
+import router from '../router'
+import Vue from 'vue'
+import Vuex from 'vuex'
+
+Vue.use(Vuex)
 
 let api = axios.create({
   baseURL: 'http://localhost:3000/api/',
@@ -68,12 +73,52 @@ let handleError = (err) => {
   state.error = err
 }
 
-export default {
+export default new Vuex.Store({
   // ALL DATA LIVES IN THE STATE
   state,
   // ACTIONS ARE RESPONSIBLE FOR MANAGING ALL ASYNC REQUESTS
   actions: {
+    login({ commit, dispatch }, user) {
+      auth.post('login', user)
+        .then(res => {
+          if (res.data.error) {
+            return handleError(res.data.error)
+          }
+          commit('setUser', res.data.data)
+          router.push('/campaigns')
+        })
+        .catch(handleError)
+    },
+    register({ commit, dispatch }, user) {
+      auth.post('register', user)
+        .then(res => {
+          if (res.data.error) {
+            return handleError(res.data.error)
+          }
+          commit("setUser", res.data.data)
+          router.push('/campaigns')
+        })
+        .catch(handleError)
+    },
+    getAuth() {
+      auth('authenticate')
+        .then(res => {
+          if (!res.data.data) {
+            return router.push('/login')
+          }
+          state.user = res.data.data
+          router.push('/campaigns')
+        }).catch(err => {
+          router.push('/login')
+        })
+    },
+    logout({ commit, dispatch }, user) {
+      auth.delete('logout', user)
+        .then(res => {
+          router.push('/')
+        }).catch(handleError)
+    },
   }
 
-}
+})
 
