@@ -6,6 +6,7 @@ export default {
     reqType: 'get',
     method(req, res, next){
       let action = 'Find User Vaults'
+      console.log(req.session.uid)
       Vaults.find({creatorId: req.session.uid})
         .then(vaults => {
           res.send(handleResponse(action, vaults))
@@ -15,7 +16,7 @@ export default {
     }
   },
   sharedVaults: {
-    path: '/sharedVaults',
+    path: '/sharedvaults',
     reqType: 'get',
     method(req, res, next){
       Vaults.find({collaborators: { $in: req.session.uid}})
