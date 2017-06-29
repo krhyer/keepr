@@ -32,8 +32,7 @@
         <p>{{keep.body}}</p>
         <p>Keeps: {{keep.keepCount}}</p>
         <p>Shares: {{keep.shareCount}}</p>
-        <p>Views: {{keep.viewCount}}</p>
-        <a class="fa fa-trash" @click="removeVault(vault)"></a>
+        <p>Views: {{keep.viewCount}}</p>        
       </div>
 
     </div>
@@ -51,7 +50,7 @@
       }
     },
     created() {
-      this.$store.dispatch('getKeeps')
+      this.$store.dispatch('getAllKeeps')
     },
     computed: {
       keeps() {

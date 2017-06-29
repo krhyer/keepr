@@ -4,7 +4,7 @@ let ObjectId = mongoose.Schema.ObjectId
 
 var schema = new mongoose.Schema({
 	title: { type: String, required: true },
-	imageURL: { type: String, required: true },
+	imgUrl: { type: String, required: true },
 	body: { type: String },
 	keepCount: { type: Number },
 	shareCount: { type: Number },
