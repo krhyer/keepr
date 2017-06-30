@@ -108,6 +108,13 @@ export default new Vuex.Store({
         })
         .catch(handleError)
     },
+    removeKeep({ commit, dispatch }, keep) {
+      api.delete('/keeps/' + keep._id)
+        .then(res => {
+          dispatch('getKeeps')
+        })
+        .catch(handleError)
+    },
     getKeeps({ commit, dispatch }) {
       api('userkeeps')
         .then(res => {

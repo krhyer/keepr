@@ -25,16 +25,16 @@
             <form class="col-md-12" @submit.prevent="createVault">
               <input type="text" v-model="name" required placeholder="Vault Name">
               <input type="text" v-model="description" required placeholder="Description of Vault">
-              <button @click="createVault">Add Vault</button>
             </form>
+              <button @click="createVault">Add Vault</button>
           </div>
           <div class="row">
             <form class="col-md-12" @submit.prevent="createKeep">
               <input type="text" v-model="title" required placeholder="Keep Title">
               <input type="text" v-model="body" required placeholder="Body of Keep">
               <input type="text" v-model="imgUrl" required placeholder="Image URL">
-              <button @click="createKeep">Add Keep</button>
             </form>
+              <button @click="createKeep">Add Keep</button>
           </div>
         </div>
         <div class="col-md-9">
@@ -46,7 +46,7 @@
                   <h3>{{vault.name}}</h3>
                   <p>{{vault.description}}</p>
                 </router-link>
-                <a class="fa fa-trash" @click="removeVault(vault)"></a>
+                <a class="glyphicon glyphicon-trash" @click="removeVault(vault)"></a>
               </div>
             </div>
           </div>
@@ -60,9 +60,8 @@
                 <p>Keeps: {{keep.keepCount}}</p>
                 <p>Shares: {{keep.shareCount}}</p>
                 <p>Views: {{keep.viewCount}}</p>
-                <a class="fa fa-trash" @click="removeVault(vault)"></a>
+                <a class="glyphicon glyphicon-trash" @click="removeKeep(keep)"></a>
               </div>
-
             </div>
           </div>
         </div>
