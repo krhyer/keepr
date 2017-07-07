@@ -32,7 +32,7 @@
         <p>{{keep.body}}</p>
         <p>Keeps: {{keep.keepCount}}</p>
         <p>Shares: {{keep.shareCount}}</p>
-        <i class="fa fa-eye"></i><p>{{keep.viewCount}}</p>        
+        <i class="glyphicon glyphicon-eye-open"></i><p>{{keep.viewCount}}</p>        
       </div>
 
     </div>
