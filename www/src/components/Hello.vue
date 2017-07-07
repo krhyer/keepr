@@ -30,9 +30,9 @@
         <h3>{{keep.title}}</h3>
         <img class="fit" :src='keep.imgUrl'>
         <p>{{keep.body}}</p>
-        <p><i glyphicon glyphicon-open-eye></i>{{keep.keepCount}}</p>
+        <p>Keeps: {{keep.keepCount}}</p>
         <p>Shares: {{keep.shareCount}}</p>
-        <p>Views: {{keep.viewCount}}</p>        
+        <i class="fa fa-eye"></i><p>{{keep.viewCount}}</p>        
       </div>
 
     </div>

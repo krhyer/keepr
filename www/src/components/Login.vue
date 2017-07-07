@@ -11,7 +11,7 @@
                 <div class="col-xs-12">
                   <div class="input-group">
                     <span class="input-group-addon">
-                      <i fa fa-envelope></i>
+                      <i class="fa fa-envelope"></i>
                     </span>
                     <input type="email" class="form-control" v-model="user.email" required placeholder="email">
                   </div>
@@ -21,7 +21,7 @@
                 <div class="col-xs-12">
                   <div class="input-group">
                     <span class="input-group-addon">
-                      <i fa fa-key></i>
+                      <i class="fa fa-key"></i>
                     </span>
                     <input type="password" class="form-control" v-model="user.password" required placeholder="password">
                   </div>
