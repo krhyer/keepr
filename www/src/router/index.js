@@ -7,7 +7,7 @@ import Vaults from '@/components/Vaults'
 import Vault from '@/components/Vault'
 // import Keeps from '@/components/Keeps'
 // import Keep from '@/components/Keep'
-// import AllKeeps from '@/components/AllKeeps'
+
 
 Vue.use(Router)
 
@@ -42,12 +42,7 @@ export default new Router({
     //   path: '/vaults/:id/keeps',
     //   name: 'Keeps',
     //   component: Keeps
-    // },
-    // {
-    //   path: '/keeps',
-    //   name: 'AllKeeps',
-    //   component: AllKeeps
-    // },
+    // },    
     // {
     //   path: '/keeps/:id',
     //   name: 'Keep',

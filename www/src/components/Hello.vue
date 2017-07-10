@@ -30,7 +30,12 @@
         <h3>{{keep.title}}</h3>
         <img class="fit" :src='keep.imgUrl'>
         <p>{{keep.body}}</p>
-        <i class="K">K</i><p>: {{keep.keepCount}}</p> <i class="fa fa-share-alt"></i><p>: {{keep.shareCount}}</p> <i class="fa fa-eye"></i><p>: {{keep.viewCount}}</p>        
+        <div class="row">
+          <i class="K">K</i>
+          <p>: {{keep.keepCount}}</p> <i class="fa fa-share-alt"></i>
+          <p>: {{keep.shareCount}}</p> <i class="fa fa-eye"></i>
+          <p>: {{keep.viewCount}}</p>
+        </div>
       </div>
 
     </div>
@@ -66,9 +71,9 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   .K {
-    font-family: 'Conthrax Sb';
+    font-family: 'Orbitron', sans-serif;
   }
-    
+
   h1,
   h2 {
     font-weight: normal;
@@ -100,6 +105,7 @@
   .customLink {
     color: #fe0096
   }
+
   .fit {
     max-width: 100%;
     max-height: auto;
