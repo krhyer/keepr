@@ -31,10 +31,18 @@
         <img class="fit" :src='keep.imgUrl'>
         <p>{{keep.body}}</p>
         <div class="row">
-          <i class="K">K</i>
-          <p>: {{keep.keepCount}}</p> <i class="fa fa-share-alt"></i>
-          <p>: {{keep.shareCount}}</p> <i class="fa fa-eye"></i>
-          <p>: {{keep.viewCount}}</p>
+          <div class="col-xs-4">
+            <i class="K">K</i>
+            <p>: {{keep.keepCount}}</p>
+          </div>
+          <div class="col-xs-4">
+            <i class="fa fa-share-alt"></i>
+            <p>: {{keep.shareCount}}</p>
+          </div>
+          <div class="col-xs-4">
+            <i class="fa fa-eye"></i>
+            <p>: {{keep.viewCount}}</p>
+          </div>
         </div>
       </div>
 
